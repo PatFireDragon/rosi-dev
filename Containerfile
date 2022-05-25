@@ -7,17 +7,18 @@ ENV ROSI_DISTRO="melodic"
 
 WORKDIR ${ROSI_INSTALL_ROOT}
 
-#ADD CoppeliaSim_Player_V4_3_0_Ubuntu18_04.tar.xz .
-ADD cmake-3.18.6.tar.gz .
-ADD setup setup
+ADD zips/CoppeliaSim_Player_V4_3_0_Ubuntu18_04.tar.xz .
+ADD zips/cmake-3.18.6.tar.gz .
+ADD configs configs
+ADD scripts scripts
 
-RUN bash setup/base.bash
-RUN bash setup/cmake.bash
-RUN bash setup/melodic.bash
-RUN bash setup/catkin.bash
-#RUN bash setup/coppelia.bash
-RUN bash setup/vnc.bash
-RUN bash setup/shell.bash
+RUN bash scripts/base.bash
+RUN bash scripts/cmake.bash
+RUN bash scripts/melodic.bash
+RUN bash scripts/catkin.bash
+RUN bash scripts/coppelia.bash
+#RUN bash scripts/vnc.bash (DEPRECADO: usar X window forwarding via ssh)
+RUN bash scripts/shell.bash
 
 
-CMD ["vncserver -httpport 5902", "bash"]
+ENTRYPOINT [ "/bin/bash" ]
