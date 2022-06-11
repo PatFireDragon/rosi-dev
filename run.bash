@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm --net="host" -e DISPLAY=${DISPLAY} -it ros:latest
+docker run --rm --net="host" -e DISPLAY=${DISPLAY} -it patfiredragon/rosi:latest

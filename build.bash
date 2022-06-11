@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t ros:latest $(pwd)
+docker build -t patfiredragon/rosi:latest $(pwd)
