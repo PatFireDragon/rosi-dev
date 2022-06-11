@@ -1,3 +1,3 @@
 #!/bin/bash
 
-podman run --rm -it ros:latest
+docker run --rm --net="host" -e DISPLAY=${DISPLAY} -it ros:latest

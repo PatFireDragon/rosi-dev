@@ -1,3 +1,5 @@
 # rosi-install
 
-Repositório para desenvolvimento do Container de instalação para o projeto ROSI.
+Repositório do Container de desenvolvimento para um projeto educacional utilizando o ROSI.
+
+## Instalação
